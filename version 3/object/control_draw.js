@@ -14,7 +14,7 @@ class control_draw{
             this.mouseDown = false;
 
             // Rectangle canvas co-ordinates 
-            this.x = 370;
+            this.x = 225;
             this.y = 30;
             this.w = 500;
             this.h = 650;
@@ -40,7 +40,7 @@ class control_draw{
             if(this.rectBound == true){
                     this.mouseDown = true;
         }
-        console.log(Button.selectedShape); // knowing which of the buttons is selected through console
+        //console.log(Button.selectedShape); // knowing which of the buttons is selected through console
 
         }
 
@@ -54,16 +54,20 @@ class control_draw{
 
         //colArray here changes colours of the rectangle 
         mUp(e){
-            if(this.mouseDown == true && this.rectBound == true){
 
-                // telling the program that is butt
+
+            if(this.mouseDown == true && this.rectBound == true){
+                console.log(Swatch.selectedColour);
+
+                // telling the program that is button
                 if (Button.selectedShape == "Rectangle"){
-                    var tempO = new Rectangle(this.xMouseStart, this.yMouseStart, this.dx, this.dy, colArray[2][6]);
+                    var tempO = new Rectangle(this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
                     this.objectSet.push(tempO);
                 }else if(Button.selectedShape == "Ellipse"){
-                    var temp = new Ellipse(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, colArray[2][6]);
+                    var temp = new Ellipse(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, Swatch.selectedColour);
                     this.objectSet.push(temp); 
                 }
+
             }
       
             this.mouseDown = false;

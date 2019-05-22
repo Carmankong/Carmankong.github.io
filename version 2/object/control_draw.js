@@ -56,7 +56,7 @@ class control_draw{
         mUp(e){
             if(this.mouseDown == true && this.rectBound == true){
 
-                // telling the program that is butt
+                // telling the program that is button
                 if (Button.selectedShape == "Rectangle"){
                     var tempO = new Rectangle(this.xMouseStart, this.yMouseStart, this.dx, this.dy, colArray[2][6]);
                     this.objectSet.push(tempO);

@@ -20,7 +20,7 @@ class Button{
         this.click = false;
 
         this.element = canvas;
-        this.element.addEventListener('click', this.mClick.bind(this));
+        this.element.addEventListener('mousedown', this.mClick.bind(this));
         this.element.addEventListener('mousemove', this.mMove.bind(this));
     }
 
@@ -28,7 +28,6 @@ class Button{
         if(this.rectBound == true){
             
             Button.selected = this;
-
             Button.selectedShape = this.text;
 
 
@@ -61,7 +60,6 @@ class Button{
         
         ctx.beginPath();
         ctx.rect(this.x, this.y, this.w, this.h);
-        // ctx.fillText(this.text, this.w/2,this.h/2 );
         ctx.strokeStyle = this.stroke;
         ctx.lineWidth = 5;
         ctx.fill();
@@ -87,5 +85,5 @@ class Button{
     }
 
 }
-Button.selected = "";
-Button.selectedShape = "";
+Button.selected = ""; //universal
+Button.selectedShape = ""; //universal
