@@ -88,4 +88,4 @@ class Button{
 
 }
 Button.selected = "";
-Button.selectedShape = "";
+Button.selectedShape = ""; //universal
