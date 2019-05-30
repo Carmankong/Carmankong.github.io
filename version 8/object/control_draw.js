@@ -22,6 +22,8 @@ class control_draw{
             this.dy = 0;
             this.stroke= colArray[0][1];
 
+            this.r = 0;
+
             this.rectBound = false;
 
             this.element = canvas;
@@ -40,7 +42,6 @@ class control_draw{
             if(this.rectBound == true){
                     this.mouseDown = true;
         }
-        //console.log(Button.selectedShape); // knowing which of the buttons is selected through console
 
         }
 
@@ -50,10 +51,9 @@ class control_draw{
             this.rectBound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
 
             if(this.mouseDown == true && this.rectBound == true){
+                this.r = width_Button.selectedWidth;
                 if(Button.selectedShape == "Brush"){
-
-
-                    var temp3 = new Brush(this.xMouse, this.yMouse, Swatch.selectedColour);
+                    var temp3 = new Brush(this.xMouse, this.yMouse, this.r, Swatch.selectedColour);
                     this.objectSet.push(temp3);
                 }
         }
