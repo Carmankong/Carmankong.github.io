@@ -84,10 +84,7 @@ class control_draw{
             Button.selected = "";
         }
 
-             
-      
-            this.mouseDown = false;
-
+        this.mouseDown = false;
         }
 
         update(){

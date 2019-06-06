@@ -50,8 +50,9 @@ class control_draw{
             this.yMouse = e.offsetY;
             this.rectBound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
 
+            // creating brush without a rectangle guide
             if(this.mouseDown == true && this.rectBound == true){
-                this.r = width_Button.selectedWidth;
+                this.r = width_Button.selectedWidth; // radius = the different size buttons
                 if(Button.selectedShape == "Brush"){
                     var temp3 = new Brush(this.xMouse, this.yMouse, this.r, Swatch.selectedColour);
                     this.objectSet.push(temp3);
@@ -65,7 +66,6 @@ class control_draw{
 
             if(this.mouseDown == true && this.rectBound == true){
                 console.log(Swatch.selectedColour);
-
                 // telling the program that is button
                 if (Button.selectedShape == "Rectangle"){
                     var tempO = new Rectangle(this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
@@ -77,7 +77,7 @@ class control_draw{
                     var temp1 = new Circle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                     this.objectSet.push(temp1);
                 }else if(Button.selectedShape == "Line"){
-                    var temp2 = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
+                    var temp2 = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.w, Swatch.selectedColour);
                     this.objectSet.push(temp2);
                 }
 
@@ -143,7 +143,7 @@ class control_draw{
             ctx.beginPath();
             ctx.rect(x,y,w,h);
             ctx.lineWidth = 1;
-            ctx.strokeStyle = colArray[2][5]; // defining what colour the stroke is when we are drawing the rectangle
+            ctx.strokeStyle = Swatch.selectedColour; // defining what colour the stroke is when we are drawing the rectangle
             ctx.stroke();
         }
 
@@ -167,32 +167,3 @@ class control_draw{
             
     
 }
-/*
-let painting = false; 
-
-function startPosition(e){
-    painting = true;
-    draw(e);
-    }
-function finishedPosition(){
-    painting= false;;
-    ctx.beginPath();
-
-    }
-
-function draw(e){
-    if(!painting) return;
-    ctx.lineWidth = 4;
-    ctx.lineCap = "round";
-    ctx.lineTo(e.clientX, e.clientY)
-    ctx.strokeStyle = "blue";
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(e.clientX, e.clientY);
-
-
-    }
-canvas.addEventListener('mousedown', startPosition );
-canvas.addEventListener('mouseup', finishedPosition);
-canvas.addEventListener('mousemove', draw);
-*/

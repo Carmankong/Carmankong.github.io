@@ -126,7 +126,6 @@ class width_Button{
     mMove(e){
         this.xMouse = e.offsetX;
         this.yMouse = e.offsetY;
-        console.log("mouse move"); 
         this.rectBound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
     }
 

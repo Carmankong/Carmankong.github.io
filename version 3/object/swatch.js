@@ -53,7 +53,7 @@ class Swatch{
     }
 
     draw(){
-        ctx.beginPath();
+        ctx.beginPath(); //start the program
         ctx.rect(this.x, this.y, this.w, this.h);
         ctx.strokeStyle = this.stroke;
         ctx.fillStyle = this.fill;

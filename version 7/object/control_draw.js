@@ -143,7 +143,7 @@ class control_draw{
             ctx.beginPath();
             ctx.rect(x,y,w,h);
             ctx.lineWidth = 1;
-            ctx.strokeStyle = colArray[2][5]; // defining what colour the stroke is when we are drawing the rectangle
+            ctx.strokeStyle = Swatch.selectedColour; // defining what colour the stroke is when we are drawing the rectangle
             ctx.stroke();
         }
 
@@ -167,32 +167,3 @@ class control_draw{
             
     
 }
-/*
-let painting = false; 
-
-function startPosition(e){
-    painting = true;
-    draw(e);
-    }
-function finishedPosition(){
-    painting= false;;
-    ctx.beginPath();
-
-    }
-
-function draw(e){
-    if(!painting) return;
-    ctx.lineWidth = 4;
-    ctx.lineCap = "round";
-    ctx.lineTo(e.clientX, e.clientY)
-    ctx.strokeStyle = "blue";
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(e.clientX, e.clientY);
-
-
-    }
-canvas.addEventListener('mousedown', startPosition );
-canvas.addEventListener('mouseup', finishedPosition);
-canvas.addEventListener('mousemove', draw);
-*/

@@ -12,6 +12,7 @@ class Rectangle{
 
 
     update(){
+        // drawing rectangle
         this.draw();
     }
 
@@ -38,6 +39,7 @@ class Ellipse{
 
 
     update(){
+        // drawing ellipse
         this.draw();
     }
 
@@ -69,7 +71,7 @@ class Circle{
     }
 
     update(){
-        
+        // drawing circle
         this.draw();
     }
 
@@ -82,7 +84,7 @@ class Circle{
 
 }
 
-
+// class line(x, y, )
 class Line{
     constructor(xS, yS, xM, yM, sCol){
         //Variables required for line
@@ -93,7 +95,7 @@ class Line{
         this.fill = sCol;
     }
     update(){
-        //Calling for line to be drawn
+        //drawing line
         this.draw()
     }
     draw(){
@@ -108,7 +110,7 @@ class Line{
     }
 }
 
-// bursh(x, y, r)
+// class brush(x, y, r, colour)
 class Brush{
     constructor(xM, yM, r, c1){
         this.xC = xM; // centre x
@@ -118,7 +120,7 @@ class Brush{
     }
 
     update(){
-        
+        // drawing brush
         this.draw();
     }
 

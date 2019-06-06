@@ -134,7 +134,7 @@ class control_draw{
             ctx.beginPath();
             ctx.rect(x,y,w,h);
             ctx.lineWidth = 1;
-            ctx.strokeStyle = colArray[2][5]; // defining what colour the stroke is when we are drawing the rectangle
+            ctx.strokeStyle = Swatch.selectedColour; // defining what colour the stroke is when we are drawing the rectangle
             ctx.stroke();
         }
 
