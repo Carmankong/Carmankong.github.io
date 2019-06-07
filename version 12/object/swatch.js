@@ -1,5 +1,3 @@
-//console.log("swatch js called");
-
 class Swatch{
     constructor(x, y, w, h, stroke, fill, over, canvas){
         // declaring what each variables are 
@@ -73,4 +71,4 @@ class Swatch{
     
 }
 Swatch.selected = ""; //universal
-Swatch.selectedColour = "rgba(0,0,0,1)"; //universal
+Swatch.selectedColour = "rgba(0,0,0,1)"; //u

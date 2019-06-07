@@ -68,7 +68,7 @@ class control_draw{
                 this.dw = width_Button.selectedWidth;
                 // telling the program that is button
                 if (Button.selectedShape == "Rectangle"){
-                    var tempO = new Rectangle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
+                    var tempO = new Rectangle(this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
                     this.objectSet.push(tempO);
                 }else if(Button.selectedShape == "Ellipse"){
                     var temp = new Ellipse(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, Swatch.selectedColour);
@@ -77,16 +77,17 @@ class control_draw{
                     var temp1 = new Circle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                     this.objectSet.push(temp1);
                 }else if(Button.selectedShape == "Line"){
-                    var temp2 = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.dw, Swatch.selectedColour);
+                    var temp2 = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart,this.dw,Swatch.selectedColour);
                     this.objectSet.push(temp2);
-                }else if(Button.selectedShape == "Diamond"){
-                    var temp3 = new Diamond( this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
-                    this.objectSet.push(temp3);
                 }else if(Button.selectedShape == "Square"){
-                    var temp4 = new Square( this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
+                    var temp3 = new Square( this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
+                    this.objectSet.push(temp3);
+                }else if(Button.selectedShape == "Diamond"){
+                    var temp4 = new Diamond( this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
                     this.objectSet.push(temp4);
-                }else if (Button.selectedShape == "Rect"){
-                    var temp5 = new Rect(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
+                }
+                else if (Button.selectedShape == "Rotate"){
+                    var temp5 = new Rotate(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
                     this.objectSet.push(temp5);
                 }
 
@@ -113,7 +114,7 @@ class control_draw{
             // makes the white rectangle for drawing area
             ctx.beginPath(); //start the program
             ctx.rect(this.x, this.y, this.w, this.h); // this rect is for boundary
-            ctx.clip(); // crop the shapes within the area
+            ctx.clip();
             ctx.fillStyle = colArray[0][0]; //colour
             ctx.strokeStyle = this.stroke;
             ctx.lineWidth = 5;
@@ -133,7 +134,6 @@ class control_draw{
                  // this draws the rectangle (guide)
                 this.draw();
                 }
-
             
         }
 
@@ -141,7 +141,7 @@ class control_draw{
         draw(){
 
             if(Button.selectedShape == "Line" || Button.selectedShape == "Rectangle" || Button.selectedShape == "Ellipse"   
-                || Button.selectedShape == "Circle" || Button.selectedShape == "Diamond" || Button.selectedShape == "Square" || Button.selectedShape == "Rect"){
+                || Button.selectedShape == "Circle" || Button.selectedShape == "Square" || Button.selectedShape == "Diamond" || Button.selectedShape == "Rotate"){
                 this.drawRect(this.xMouseStart, this.yMouseStart, this.dx, this.dy, colArray[0][4]);
             }
         }

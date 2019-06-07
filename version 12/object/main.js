@@ -1,9 +1,8 @@
-// basic code for animate loop
 console.log("main js called");
 
 var objectSet = []; // emty the list
 
-var objectOne = new control_draw(canvas);
+var objectOne = new control_draw(canvas,225,30,500,650);
 objectSet.push(objectOne);
 
 // drawing the button out
@@ -15,7 +14,7 @@ var but4 = new Button("Line", 50, 190, 120, 40, colArray[0][1], colArray[0][1], 
 var but5 = new Button("Brush", 50, 280, 120, 40, colArray[0][1], colArray[0][1], colArray[2][2], colArray[2][0], canvas);
 var but6 = new Button("Square", 50, 370, 120, 40, colArray[0][1], colArray[0][1], colArray[2][2], colArray[2][0], canvas);
 var but7 = new Button("Diamond", 50, 420, 120, 40, colArray[0][1], colArray[0][1], colArray[2][2], colArray[2][0], canvas);
-var but8 = new Button("Rect", 50, 470, 120, 40, colArray[0][1], colArray[0][1], colArray[2][2], colArray[2][0], canvas);
+var but8 = new Button("Rotate", 50, 470, 120, 40, colArray[0][1], colArray[0][1], colArray[2][2], colArray[2][0], canvas);
 objectSet.push(but1, but2, but3, but4, but5, but6, but7, but8);
 
 // buttons for reset and undo

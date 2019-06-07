@@ -2,16 +2,17 @@ console.log("object js called");
 
 // class Rectangle takes x, y, w, h (integers), color as rgba string(colArray)
 class Rectangle{
-    constructor(x, y, w, h, c){
+    constructor(x, y, w, h, c1){
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
-        this.fill = c;
+        this.fill = c1;
     }
 
 
     update(){
+        // drawing rectangle
         this.draw();
     }
 
@@ -22,6 +23,7 @@ class Rectangle{
         ctx.fill();
     }
 }   
+
 // class ellipse (x, y, radiusX, radiusY, rotation, startAngle, endAngle, colour)
 class Ellipse{
     constructor(xS, yS, xM, yM, c1){
@@ -82,7 +84,7 @@ class Circle{
 
 }
 
-// class line(x, y, w, colour)
+// class line(x, y, )
 class Line{
     constructor(xS, yS, xM, yM, dw, sCol){
         //Variables required for line
@@ -131,36 +133,7 @@ class Brush{
     }
 
 }
-
-// class diamond (x, y, w, h, colour)
-class Diamond{
-    constructor(xS, yS, w, h, c1){
-        this.xC = xS + w/2
-        this.yC = yS + h/2;
-        this.s = (w + h)/2;
-        this.ang = 45;
-        this.fill = c1;
-}
-    
-    update(){
-        // drawing out a diamond
-        this.draw();
-    }
-    
-    draw(){
-        ctx.save()
-        ctx.translate(this.xC, this.yC);
-        ctx.rotate(this.ang*Math.PI/180); // rotate the sqaure into diamond
-    
-        ctx.beginPath();
-        ctx.rect(0 - this.s/2, 0 - this.s/2, this.s, this.s);
-        ctx.fillStyle = this.fill;
-        ctx.fill();
-        ctx.restore();
-        }
-}
-
-//class square (x, y, w, h, colour)
+// class Square
 class Square{
     constructor(xS, yS, w, h, c1){
         this.xC = xS + w/2;
@@ -187,7 +160,33 @@ class Square{
         }
 }
 
-class Rect{
+class Diamond{
+    constructor(xS, yS, dw, dh, c1){
+        this.xC = xS + dw/2
+        this.yC = yS + dh/2;
+        this.s = ( dw + dh )/2;
+        this.ang = 45;
+        this.fill = c1;
+}
+    
+    update(){
+        this.draw();
+    }
+    
+    draw(){
+        ctx.save()
+        ctx.translate(this.xC, this.yC);
+        ctx.rotate(this.ang*Math.PI/180);
+    
+        ctx.beginPath();
+        ctx.rect(0 - this.s/2, 0 - this.s/2, this.s, this.s);
+        ctx.fillStyle = this.fill;
+        ctx.fill();
+        ctx.restore();
+        }
+}
+
+class Rotate{
     constructor(xM, yM, xS, yS, w, h, c1){
         this.xC = (xS + xM)/2;
         this.yC = (yS + yM)/2;
@@ -214,4 +213,4 @@ class Rect{
         ctx.fill();
         ctx.restore();
     }
-}   
+}
