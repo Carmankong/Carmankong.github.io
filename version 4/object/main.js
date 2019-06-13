@@ -13,9 +13,9 @@ var butTwo = new Button("Ellipse", 50, 100, 120, 40, colArray[0][1], colArray[0]
 objectSet.push(butOne, butTwo);
 
 // buttons for reset and undo
-var R1 = new Button("Reset", 15, 650, 90, 30, colArray[0][1], colArray[0][1], colArray[2][2], colArray[2][0], canvas);
-var U1 = new Button("Undo", 120, 650, 90, 30, colArray[0][1], colArray[0][1], colArray[2][2], colArray[2][0], canvas);
-objectSet.push(R1, U1);
+var Reset = new Button("Reset", 15, 650, 90, 30, colArray[0][1], colArray[0][1], colArray[2][2], colArray[2][0], canvas);
+var Undo = new Button("Undo", 120, 650, 90, 30, colArray[0][1], colArray[0][1], colArray[2][2], colArray[2][0], canvas);
+objectSet.push(Reset, Undo);
 
 // colour button x, y, w, h, stroke, fill, over, canvas
 //colour black

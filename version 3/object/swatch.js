@@ -40,7 +40,6 @@ class Swatch{
         if(this.insideShape == true){
             this.stroke = "rgb(230,230,230)"; //declare what the colour would be when the mouse is inside of the button
         }
-        
         else{
             this.stroke = "rgb(250,250,250)"; //declare what the colout would be when the mouse is not inside
         }

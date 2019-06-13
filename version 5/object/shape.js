@@ -61,9 +61,9 @@ class Circle{
         if(this.radiusX <this.radiusY){
             this.r = this.radiusX;
         }
-            else{
-                this.r = this.radiusY
-            };
+        else{
+            this.r = this.radiusY
+        };
         
         this.fill = c1;
     }
