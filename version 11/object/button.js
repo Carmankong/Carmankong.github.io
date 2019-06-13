@@ -177,4 +177,4 @@ class width_Button{
 }
 width_Button.selected = ""; //universal
 width_Button.selectedWidth = ""; //universal
-width_Button.selectedRadius = ""; //universal
+width_Button.selectedRadius = 10; //universal

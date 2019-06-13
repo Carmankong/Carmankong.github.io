@@ -28,5 +28,50 @@
     <li><a href="version 10/index.html">version 10 </a> this is the tenth version, sprint of the website</li>
     <li><a href="version 11/index.html">version 11 </a> this is the eleventh version, sprint of the website</li>
     <li><a href="version 12/index.html">version 12 </a> this is the twelevth version, sprint of the website</li>
+
+    <hr>
+
+    <h3>Relevant Implications:</h3>
+    <p>Future proofing ---- Program is designed, so now features can be added in easily and old ones removed <br>
+        Addressed ----- Program element, (colours, buttons, shapes etc.) have all been programmed as an object, means each is a self-contained, modular piece of code, that takes a defined set of parameters to work. (Many take basic mouse data and colour information). <br>    
+        All objects are built to a similar structure and compulsorily contain an update function while means they can appear on the interface using the update call. <br>
+        Management of most objects usually happens in a central place (control_draw.js). <br>
+        The idea is an experienced programmer could easily remove elements or add new features. Comments are also precise and informative. <br>
+    </p>
+
+    <h4>Functionality:</h4>
+    <p>Does the program work well?<br>
+        - Free of bugs, loads quickly, works on different browsers.  <br>
+        
+        How have we addressed this?<br>
+        - Program is in pure javascript. Has no graphics, therefore loads very quickly. I have tested this by using a live web server (Github) to store my version and have observed loading performance. <br>
+        
+        To ensure the program works well, I have systematically tested it (console log, testing videos etc.) <br>
+         -Tested user interactions<br>
+         -  Position of clicking and direction of dragging.<br>
+         -      This has included careful checks around boundaries.<br>
+         -      The use of the Math.abs function was discovered after testing failures drawing circular shapes. (because these objects were being given negative radius values). <br>
+        Any new components were tested prior to being added to the main program. At various stages in sprints, console logging was used to analyse boundary test functions, and locate problems when bugs appeared. <br>
+        </p>
+
+    <h4>Examples of trialling and making decisions:</h4>
+    <p> Can you find examples of exploding different options and making a decision about which is the best solution? <br>
+        -Trialling different options for allowing the user to draw circles on the screen.<br>
+        - Giving rectangular guides. <br>
+        
+        Effectively using information from testing and trialling to improve the functionality of the outcome. <br>
+        Interface design trialling colour themes. <br>
+        
+        Finding situations where objects drew outside of the drawing area (in spite of having in-boundary parameters) led to the use of the boundsCheck function. <br>
+        
+        Good to talk about “project backlog” and the concept of prioritisation. <br>
+        
+        How did your working process (planning, testing, trialling) lead to the development of a high-quality digital outcome? <br>
+        How was the Agile process helpful?<br>
+        - Allowed planning and development to happen together.
+        - Created repeated cycles of plan - develop- test. <br>
+        - After two or three sprints I got a much clearer idea of what I could achieve and my aims became much more focused and realistic. <br>
+        - Helped to see the project in a highly simplified form at the start (potentially shippable product). <br>
+    </p>
 </body>
 </html>

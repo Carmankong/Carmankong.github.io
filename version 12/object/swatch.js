@@ -7,16 +7,19 @@ class Swatch{
         this.h = h;
         this.stroke = stroke;
         this.fill = fill;
-        this.over = over;
+        this.over = over; //  when your mouse is over the boundary, it changes colour
 
         //delcare that the mouse location starts at 0
         this.xMouse = 0;
         this.yMouse = 0;
 
+        // set everything to false
         this.insideShape = false;
         this.click = false;
 
         this.element = canvas;
+
+        //Event listeners (function)
         this.element.addEventListener('click', this.mClick.bind(this));
         this.element.addEventListener('mousemove', this.mMove.bind(this));
     }
@@ -24,7 +27,7 @@ class Swatch{
     mClick(e){
         if(this.insideShape == true){
             Swatch.selected = this;
-            Swatch.selectedColour = this.fill; 
+            Swatch.selectedColour = this.fill; // connecting the variables together with fill
 
         }
 }
@@ -51,8 +54,8 @@ class Swatch{
     }
 
     draw(){
-        ctx.beginPath();
-        ctx.rect(this.x, this.y, this.w, this.h);
+        ctx.beginPath();// start function
+        ctx.rect(this.x, this.y, this.w, this.h); //parameter of rectangle
         ctx.strokeStyle = this.stroke;
         ctx.fillStyle = this.fill;
         ctx.lineWidth = 5; // deciding the length of line width
@@ -71,4 +74,4 @@ class Swatch{
     
 }
 Swatch.selected = ""; //universal
-Swatch.selectedColour = "rgba(0,0,0,1)"; //u
+Swatch.selectedColour = "rgba(0,0,0,1)"; //universal, defalut colour of the shapes
