@@ -119,7 +119,6 @@ class width_Button{
             width_Button.selected = this;
             width_Button.selectedWidth = this.width;
 
-
         }
     }
 
@@ -174,4 +173,4 @@ class width_Button{
 
 }
 width_Button.selected = ""; //universal
-width_Button.selectedWidth = ""; //universal
+width_Button.selectedWidth = 10; //universal

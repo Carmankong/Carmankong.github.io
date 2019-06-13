@@ -29,7 +29,7 @@ var r4 = new width_Button("L", 140, 330, 30, 30, 0, 15, colArray[0][1], colArray
 var r5 = new width_Button("XL", 185, 330, 30, 30, 0, 20, colArray[0][1], colArray[0][1], colArray[1][5], colArray[2][0], canvas);
 objectSet.push(r1, r2, r3, r4, r5);
 
-//width button for the size of brush
+//width button for the size of line
 var w1 = new width_Button("XS", 5, 240, 30, 30, 2, 0, colArray[0][1], colArray[0][1], colArray[1][5], colArray[2][0], canvas);
 var w2 = new width_Button("S", 50, 240, 30, 30, 5, 0, colArray[0][1], colArray[0][1], colArray[1][5], colArray[2][0], canvas);
 var w3 = new width_Button("M", 95, 240, 30, 30, 10, 0, colArray[0][1], colArray[0][1], colArray[1][5], colArray[2][0], canvas);

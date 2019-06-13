@@ -57,8 +57,6 @@ class control_draw{
 
 
             if(this.mouseDown == true && this.rectBound == true){
-                console.log(Swatch.selectedColour);
-
                 // telling the program that is button
                 if (Button.selectedShape == "Rectangle"){
                     var tempO = new Rectangle(this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
@@ -70,6 +68,7 @@ class control_draw{
                     var temp1 = new Circle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                     this.objectSet.push(temp1);
                 }else if(Button.selectedShape == "Line"){
+                    console.log("Line");
                     var temp2 = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                     this.objectSet.push(temp2);
                 }
@@ -77,17 +76,17 @@ class control_draw{
             }
 
         // making a reset button
-        console.log(Button.selected);
-        console.log(Button.selectedShape);
         if (Button.selectedShape == "Reset"){
             this.objectSet = []; // clearing the object set
             Button.selected = "";
+            Button.selectedShape = ""; //deselecting the button
         } 
 
         // making an undo button
         if (Button.selectedShape == "Undo"){
             this.objectSet.pop(); // pop the last thing that was drawn on the screen
             Button.selected = "";
+            Button.selectedShape = ""; // deselecting the button, so it won't keep on undoing the actions
         }
 
              

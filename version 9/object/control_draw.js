@@ -85,18 +85,18 @@ class control_draw{
 
             }
 
-        // making a reset button
-        console.log(Button.selected);
-        console.log(Button.selectedShape);
+            // making a reset button
         if (Button.selectedShape == "Reset"){
             this.objectSet = []; // clearing the object set
             Button.selected = "";
+            Button.selectedShape = ""; //deselecting the button
         } 
 
         // making an undo button
         if (Button.selectedShape == "Undo"){
             this.objectSet.pop(); // pop the last thing that was drawn on the screen
             Button.selected = "";
+            Button.selectedShape = ""; // deselecting the button, so it won't keep on undoing the actions
         }
 
              
